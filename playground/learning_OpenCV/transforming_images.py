@@ -42,6 +42,23 @@ rotated_charizard = cv2.warpAffine(charizard_img, rotation_matrix, (w,h))
 # the (w,h) parameter at the end ensures the same img size as OG img
 
 
+'The below code focuses on scaling an image'
+
+scaled_charizard = cv2.resize(charizard_img, None, fx=0.5, fy=0.5)
+# unlike the previous time we used resize, we do not define height/width to scale
+# fx and fy define the new scale for x and y
+# 0.5 for both means that x and y will be half of their original sizes
+# as mentioned, similar to resizing an image, but we don't have to define pixels explicitly
+
+# cv2.imshow("Rotated Image" ,rotated_charizard)
+# cv2.imshow("Scaled Image" ,scaled_charizard)
+# displays the rotated and scaled images
+cv2.imwrite("images/scaled_charizard.jpg", scaled_charizard)
+
+
+cv2.destroyAllWindows()
+
+
 
 
 
