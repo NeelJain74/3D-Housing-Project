@@ -5,6 +5,7 @@ charizard_img = cv2.imread("images/charizard_sprite.png")
 
 resized_charizard = cv2.resize(charizard_img, (800, 800))
 # resizes the image to 800x800
+# resize takes width first, then height
 
 cv2.imshow("Resized Image", resized_charizard)
 # displays the image (in this case, the resized one)
